@@ -1,8 +1,8 @@
-import { CardProps } from "antd";
+import { CardProps } from "../../interfaces/CardProps";
 
-function Card({ image, title, paragraph }: CardProps) {
-  console.log(title, image, paragraph);
-  return <div>{title}</div>;
+function Card({ card }: { card: CardProps }) {
+  console.log(card);
+  return <div>{card.title}</div>;
 }
 
 export default Card;
