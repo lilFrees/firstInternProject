@@ -4,7 +4,7 @@ import Services from "./components/Services/Services";
 
 function App() {
   return (
-    <div className="font-inter h-full w-full overflow-x-hidden bg-slate-50">
+    <div className="bg-slate-50 font-inter">
       <div className="flex h-screen w-full flex-col">
         <Navbar />
         <Hero />
