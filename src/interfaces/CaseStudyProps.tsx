@@ -3,5 +3,5 @@ export interface CaseStudyProps {
   image: string;
   title: string;
   paragraph: string;
-  color: "blue" | "pink" | "green";
+  color: "blue" | "pink" | "lime";
 }

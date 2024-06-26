@@ -1,4 +1,5 @@
 import Line from "../UI/Line";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 function Testimonial() {
   return (
@@ -11,6 +12,7 @@ function Testimonial() {
           <span className="mt-4 block font-bold">working with us</span>
         </h2>
       </div>
+      <div className=""></div>
     </div>
   );
 }

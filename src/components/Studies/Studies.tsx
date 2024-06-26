@@ -3,7 +3,7 @@ import case1 from "../../assets/Case-study__image.png";
 import case2 from "../../assets/Case-study__image-2.png";
 import case3 from "../../assets/Case-study__image-3.png";
 import { CaseStudyProps } from "../../interfaces/CaseStudyProps";
-// import StudyCase from "./StudyCase";
+import StudyCase from "./StudyCase";
 
 const caseStudies: CaseStudyProps[] = [
   {
@@ -20,7 +20,7 @@ const caseStudies: CaseStudyProps[] = [
     title: "Website Design for SCFC Canada",
     paragraph:
       "Born out of a vision, a single-minded objective that puts service before anything else, Swift Clearance and Forwarding Corp. surging forth to deliver the best services in the shipping and logistics scenario. Its meteoric rise stems out of a solid foundation. The management boasts of over 20 years of rich and varied experience in the shipping and freight forwarding industry.",
-    color: "green",
+    color: "lime",
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ function Studies() {
   console.log(caseStudies);
   return (
     <div className="border-y-[1px] border-slate-300 bg-slate-200">
-      <div className="mx-auto max-w-[1145px] px-2 py-14">
+      <div className="mx-auto flex max-w-[1145px] flex-col gap-12 px-2 py-14">
         <div className="flex flex-col items-center gap-4">
           <Line />
           <h2 className="text-center text-4xl">
@@ -46,6 +46,12 @@ function Studies() {
           </h2>
         </div>
         {/* CARDS */}
+
+        <div className="flex flex-col gap-4">
+          {caseStudies.map((study) => (
+            <StudyCase case={study} />
+          ))}
+        </div>
       </div>
     </div>
   );

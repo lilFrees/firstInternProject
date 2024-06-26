@@ -59,7 +59,6 @@ function Services() {
           pagination={{
             clickable: true,
             renderBullet: function (_, className) {
-              console.log(className);
               return `<span class="${className} translate-y-5 z-20 w-3 h-3 bg-gradient from-purple-500 to-pink-500"></span>`;
             },
           }}
