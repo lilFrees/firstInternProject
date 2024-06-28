@@ -4,8 +4,8 @@ import LinkButton from "../UI/LinkButton";
 
 function Presentation() {
   return (
-    <div className="mx-auto flex max-w-[1145px] items-center px-4 py-12">
-      <div className="flex w-full flex-col gap-5">
+    <div className="mx-auto flex max-w-[1145px] gap-12 px-4 py-28">
+      <div className="flex w-full flex-col gap-10">
         <Line />
         <h2 className="text-4xl">
           <span>Leading companies trust us</span>
@@ -22,7 +22,9 @@ function Presentation() {
           development company that guarantees the successful delivery of your
           project.
         </p>
-        <LinkButton endIcon="arrow">See more information</LinkButton>
+        <LinkButton endIcon="arrow" className="mt-8">
+          See more information
+        </LinkButton>
       </div>
       <div className="relative h-full w-full cursor-pointer">
         <img

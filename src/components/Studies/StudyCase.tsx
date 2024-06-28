@@ -2,11 +2,11 @@ import { CaseStudyProps } from "../../interfaces/CaseStudyProps";
 import LinkButton from "../UI/LinkButton";
 
 function StudyCase(props: { case: CaseStudyProps }) {
-  console.log(props.case);
+  console.log(props.case.color);
   return (
     <div
       className={
-        "flex h-max w-full basis-[50%] items-center overflow-hidden rounded-2xl border-[1px] " +
+        "flex h-max w-full basis-[50%] items-center overflow-hidden rounded-2xl border-[1px] border-slate-300 " +
         "bg-" +
         props.case.color +
         "-100"
@@ -22,7 +22,7 @@ function StudyCase(props: { case: CaseStudyProps }) {
       <div className="flex flex-1 flex-col gap-8 border-slate-100 px-14 py-16 text-slate-700">
         <h3 className="text-3xl font-semibold">{props.case.title}</h3>
         <p className="text-sm">{props.case.paragraph}</p>
-        <LinkButton endIcon="chevron" size="small">
+        <LinkButton endIcon="chevron" size="small" className="self-end">
           Read more
         </LinkButton>
       </div>

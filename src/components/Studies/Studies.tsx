@@ -4,6 +4,7 @@ import case2 from "../../assets/Case-study__image-2.png";
 import case3 from "../../assets/Case-study__image-3.png";
 import { CaseStudyProps } from "../../interfaces/CaseStudyProps";
 import StudyCase from "./StudyCase";
+import LinkButton from "../UI/LinkButton";
 
 const caseStudies: CaseStudyProps[] = [
   {
@@ -52,6 +53,10 @@ function Studies() {
             <StudyCase case={study} />
           ))}
         </div>
+
+        <LinkButton size="medium" endIcon="chevron" className="self-end">
+          Read more case studies
+        </LinkButton>
       </div>
     </div>
   );

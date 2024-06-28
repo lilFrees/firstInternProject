@@ -1,0 +1,8 @@
+.testimonial-swiper .swiper-pagination {
+  display: static;
+  margin-top: 1.5rem;
+}
+
+.testimonial-swiper .swiper-pagination-bullet {
+  @apply h-max w-max rounded-none text-slate-700;
+}

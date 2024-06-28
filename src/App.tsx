@@ -6,6 +6,11 @@ import CompanyHeader from "./components/Companies/CompanyHeader";
 import CompanyList from "./components/Companies/CompanyList";
 import Testimonial from "./components/Testimonial/Testimonial";
 import Studies from "./components/Studies/Studies";
+import Teams from "./components/Teams/Teams";
+import Design from "./components/Design/Design";
+import TechStack from "./components/TechStack/TechStack";
+import Process from "./components/Process/Process";
+import Blog from "./components/Blog/Blog";
 
 function App() {
   return (
@@ -20,6 +25,11 @@ function App() {
       <CompanyList />
       <Testimonial />
       <Studies />
+      <Teams />
+      <Design />
+      <TechStack />
+      <Process />
+      <Blog />
     </div>
   );
 }
