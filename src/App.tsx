@@ -11,6 +11,8 @@ import Design from "./components/Design/Design";
 import TechStack from "./components/TechStack/TechStack";
 import Process from "./components/Process/Process";
 import Blog from "./components/Blog/Blog";
+import CTA from "./components/CTA/CTA";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
       <TechStack />
       <Process />
       <Blog />
+      <CTA />
+      <Footer />
     </div>
   );
 }

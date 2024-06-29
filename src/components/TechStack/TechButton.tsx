@@ -15,10 +15,9 @@ function TechButton({
     ? "bg-gradient-to-r from-purple-900 to-pink-600 bg-clip-text text-transparent font-semibold"
     : "font-base";
 
-  console.log(tech);
   return (
     <div className="relative">
-      <button className={className + " text-[16px]"} onClick={onClick}>
+      <button className={className + " min-w-28 text-[16px]"} onClick={onClick}>
         {tech.tech}
       </button>
       {isActive && (

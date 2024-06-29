@@ -2,7 +2,7 @@ import { DesignCardProps } from "../../interfaces/DesignCardProps";
 
 function DesignCard({ card }: { card: DesignCardProps }) {
   return (
-    <div className="flex h-full w-full gap-6 border-[1px] border-slate-300 bg-slate-100 p-8">
+    <div className="flex h-full w-full gap-6 border-[1px] border-slate-300 bg-white p-8">
       <div
         className={
           "flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-gradient-to-bl p-2" +

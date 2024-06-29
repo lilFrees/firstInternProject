@@ -1,9 +1,9 @@
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import icon1 from "../../assets/icon-1.svg";
-import icon2 from "../../assets/icon-2.svg";
-import icon3 from "../../assets/icon-3.svg";
+import icon1 from "../../assets/services/icon-1.svg";
+import icon2 from "../../assets/services/icon-2.svg";
+import icon3 from "../../assets/services/icon-3.svg";
 import { CardProps } from "../../interfaces/CardProps";
 import Card from "./Card";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -48,7 +48,7 @@ const services: CardProps[] = [
 
 function Services() {
   return (
-    <div className="z-50 border-y-[1px] border-slate-300 bg-slate-200">
+    <div className="z-50 border-y-[1px] border-slate-300 bg-slate-100">
       <div className="mx-auto flex max-w-[1145px] flex-col gap-8 py-12">
         <h2 className="text-center text-4xl font-bold">Services we offer</h2>
         <Swiper

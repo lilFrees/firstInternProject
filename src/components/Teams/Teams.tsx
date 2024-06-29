@@ -1,12 +1,12 @@
 import Line from "../UI/Line";
 import Team from "./Team";
-import team1 from "../../assets/team1.png";
-import team2 from "../../assets/team2.png";
-import team3 from "../../assets/team3.png";
+import team1 from "../../assets/teams/team1.png";
+import team2 from "../../assets/teams/team2.png";
+import team3 from "../../assets/teams/team3.png";
 
-import ceo1 from "../../assets/ceo1.png";
-import ceo2 from "../../assets/ceo2.png";
-import ceo3 from "../../assets/ceo3.png";
+import ceo1 from "../../assets/teams/ceo1.png";
+import ceo2 from "../../assets/teams/ceo2.png";
+import ceo3 from "../../assets/teams/ceo3.png";
 import { TeamProps } from "../../interfaces/TeamProps";
 
 const teams: TeamProps[] = [

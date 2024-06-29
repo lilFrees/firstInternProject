@@ -1,7 +1,7 @@
 import Line from "../UI/Line";
-import case1 from "../../assets/Case-study__image.png";
-import case2 from "../../assets/Case-study__image-2.png";
-import case3 from "../../assets/Case-study__image-3.png";
+import case1 from "../../assets/case-studies/Case-study__image.png";
+import case2 from "../../assets/case-studies/Case-study__image-2.png";
+import case3 from "../../assets/case-studies/Case-study__image-3.png";
 import { CaseStudyProps } from "../../interfaces/CaseStudyProps";
 import StudyCase from "./StudyCase";
 import LinkButton from "../UI/LinkButton";
@@ -34,10 +34,9 @@ const caseStudies: CaseStudyProps[] = [
 ];
 
 function Studies() {
-  console.log(caseStudies);
   return (
-    <div className="border-y-[1px] border-slate-300 bg-slate-200">
-      <div className="mx-auto flex max-w-[1145px] flex-col gap-12 px-2 py-14">
+    <div className="border-y-[1px] border-slate-300 bg-slate-100">
+      <div className="mx-auto flex max-w-[1145px] flex-col gap-12 px-2 py-20">
         <div className="flex flex-col items-center gap-4">
           <Line />
           <h2 className="text-center text-4xl">
@@ -50,7 +49,7 @@ function Studies() {
 
         <div className="flex flex-col gap-4">
           {caseStudies.map((study) => (
-            <StudyCase case={study} />
+            <StudyCase key={study.id} case={study} />
           ))}
         </div>
 

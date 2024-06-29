@@ -2,14 +2,25 @@ import { CaseStudyProps } from "../../interfaces/CaseStudyProps";
 import LinkButton from "../UI/LinkButton";
 
 function StudyCase(props: { case: CaseStudyProps }) {
-  console.log(props.case.color);
+  let colorClass = "";
+
+  switch (props.case.color) {
+    case "blue":
+      colorClass = "bg-[#F1F2FF]";
+      break;
+    case "pink":
+      colorClass = "bg-[#FFF4F4]";
+      break;
+    case "lime":
+      colorClass = "bg-[#F0FFF7]";
+      break;
+  }
+
   return (
     <div
       className={
         "flex h-max w-full basis-[50%] items-center overflow-hidden rounded-2xl border-[1px] border-slate-300 " +
-        "bg-" +
-        props.case.color +
-        "-100"
+        colorClass
       }
     >
       <div className="h-full w-full flex-1">

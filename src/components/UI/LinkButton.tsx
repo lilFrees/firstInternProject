@@ -12,16 +12,27 @@ function LinkButton({
   size?: "small" | "medium" | undefined;
   className?: string;
 }) {
-  const fontSize = size === "small" ? 14 : 20;
+  let fontSize = "";
+
+  switch (size) {
+    case "small":
+      fontSize = "text-[14px]";
+      break;
+    case "medium":
+      fontSize = "text-[20px]";
+      break;
+  }
 
   return (
     <div
       className={
         "flex w-max cursor-pointer items-center gap-4 bg-gradient-to-r from-purple-800 to-pink-700 bg-clip-text font-bold text-transparent " +
-        className
+        className +
+        " " +
+        fontSize
       }
     >
-      <div className={"text-[" + fontSize + "px]"}>{children}</div>
+      <div>{children}</div>
       {endIcon === "arrow" && <FaArrowRight className="text-pink-700" />}{" "}
       {endIcon === "chevron" && <FaChevronRight className="text-pink-700" />}
     </div>
