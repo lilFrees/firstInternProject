@@ -7,7 +7,6 @@ import icon3 from "../../assets/icon-3.svg";
 import { CardProps } from "../../interfaces/CardProps";
 import Card from "./Card";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
 
 const services: CardProps[] = [
   {
@@ -56,14 +55,7 @@ function Services() {
           className="w-full py-16"
           slidesPerView={3}
           spaceBetween={50}
-          pagination={{
-            clickable: true,
-            renderBullet: function (_, className) {
-              return `<span class="${className} translate-y-5 z-20 w-3 h-3 bg-gradient from-purple-500 to-pink-500"></span>`;
-            },
-          }}
           loop={true}
-          modules={[Pagination]}
           autoplay={{
             delay: 1000,
           }}

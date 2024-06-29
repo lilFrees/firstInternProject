@@ -2,6 +2,7 @@ import { useState } from "react";
 import Line from "../UI/Line";
 import { TechProps } from "../../interfaces/TechProps";
 import TechButton from "./TechButton";
+import { AnimatePresence } from "framer-motion";
 
 const stack: TechProps[] = [
   {
@@ -44,18 +45,19 @@ function TechStack() {
         </h2>
       </div>
       <div className="flex flex-col gap-8">
-        <div className="flex items-center justify-center gap-8">
-          {stack.map((btn) => (
-            <TechButton
-              tech={btn}
-              key={btn.id}
-              onClick={() => {
-                setSelected(btn.id);
-              }}
-              isActive={selected === btn.id}
-            />
-          ))}
-        </div>
+        <AnimatePresence>
+          <div className="flex items-center justify-center gap-8">
+            {stack.map((btn, i) => (
+              <div key={btn.id} className="flex flex-col items-center">
+                <TechButton
+                  tech={btn}
+                  onClick={() => setSelected(btn.id)}
+                  isActive={selected === i + 1}
+                />
+              </div>
+            ))}
+          </div>
+        </AnimatePresence>
         <div className=""></div>
       </div>
     </div>
