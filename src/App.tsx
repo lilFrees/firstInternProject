@@ -13,6 +13,7 @@ import Process from "./components/Process/Process";
 import Blog from "./components/Blog/Blog";
 import CTA from "./components/CTA/CTA";
 import Footer from "./components/Footer/Footer";
+import Copyright from "./components/Footer/Copyright";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
       <Blog />
       <CTA />
       <Footer />
+      <Copyright />
     </div>
   );
 }

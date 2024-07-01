@@ -1,5 +1,5 @@
 import Line from "../UI/Line";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper as SwiperReact, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { useRef, useState } from "react";
@@ -12,6 +12,7 @@ import { FeedbackProps } from "../../interfaces/FeedbackProps";
 import TestimonialClient from "./TestimonialClient";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa";
+import Swiper from "swiper";
 
 const testimonials: FeedbackProps[] = [
   {
@@ -54,10 +55,10 @@ const testimonials: FeedbackProps[] = [
 function Testimonial() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  let swiperRef = useRef<any>(null);
+  const swiperRef = useRef<Swiper | null>(null);
 
-  function handleSwiper(swiper) {
-    setCurrentIndex(swiper.activeIndex);
+  function handleSwiper(swiper: Swiper) {
+    setCurrentIndex(swiper.realIndex);
   }
 
   function handleNextSlide() {
@@ -74,7 +75,7 @@ function Testimonial() {
 
   const goToSlide = (index) => {
     if (swiperRef.current) {
-      swiperRef.current.slideTo(index);
+      swiperRef.current.slideToLoop(index);
     }
   };
 
@@ -101,7 +102,7 @@ function Testimonial() {
         >
           <FaArrowRight className="" />
         </button>
-        <Swiper
+        <SwiperReact
           spaceBetween={30}
           slidesPerView={1}
           className="testimonial-swiper"
@@ -109,6 +110,7 @@ function Testimonial() {
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
           }}
+          loop={true}
         >
           {testimonials.map((el) => (
             <SwiperSlide key={el.id}>
@@ -119,7 +121,7 @@ function Testimonial() {
               </div>
             </SwiperSlide>
           ))}
-        </Swiper>
+        </SwiperReact>
         <div className="flex items-center justify-center gap-20">
           {testimonials.map((el, i) => (
             <TestimonialClient
