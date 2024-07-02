@@ -1,11 +1,15 @@
+import { useRef } from "react";
 import { TeamProps } from "../../interfaces/TeamProps";
+import Ball from "../UI/Ball";
 
 function Team({ team }: { team: TeamProps }) {
+  const ref = useRef(null);
   return (
     <div
       className={
         "flex gap-16 " + (team.order === "reverse" && "flex-row-reverse")
       }
+      ref={ref}
     >
       <div className="flex h-min basis-1/2 flex-col gap-8">
         <h4 className="text-3xl font-semibold">
@@ -44,10 +48,21 @@ function Team({ team }: { team: TeamProps }) {
           </div>
         </div>
       </div>
-      <div className="h-[26rem] w-full basis-1/2 overflow-hidden rounded-xl shadow-sm">
+      <div className="relative h-[26rem] w-full basis-1/2 shadow-sm">
+        <Ball
+          className="-left-5 bottom-10 z-10"
+          divRef={ref}
+          animatePos="top"
+        />
+        <Ball
+          className="-right-5 -top-10 z-10 from-orange-400 to-amber-400"
+          divRef={ref}
+          animatePos="top"
+        />
+
         <img
           src={team.teamImage}
-          className="block h-full w-full object-cover"
+          className="relative z-20 block h-full w-full rounded-xl object-cover"
         />
       </div>
     </div>

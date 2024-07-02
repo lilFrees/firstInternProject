@@ -7,8 +7,6 @@ import TechButton from "./TechButton";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 
-const back = import.meta.glob(`../../assets/techStack/back/*.png`);
-
 import tec1 from "../../assets/techStack/back/tech1.png";
 import tec2 from "../../assets/techStack/back/tech2.png";
 import tec3 from "../../assets/techStack/back/tech3.png";

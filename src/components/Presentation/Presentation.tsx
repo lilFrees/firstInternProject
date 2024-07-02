@@ -1,11 +1,21 @@
+import { useRef } from "react";
 import thumbnail from "../../assets/video-thumbnail.png";
+import Ball from "../UI/Ball";
 import Line from "../UI/Line";
 import LinkButton from "../UI/LinkButton";
 
 function Presentation() {
+  const ref = useRef(null);
   return (
-    <div className="relative mx-auto flex max-w-[1145px] gap-12 overflow-hidden px-4 py-28">
-      <div className="gradient-ball left-3 top-0 translate-y-[-50%]"></div>
+    <div
+      ref={ref}
+      className="relative mx-auto flex max-w-[1145px] gap-12 overflow-hidden px-4 py-28"
+    >
+      <Ball
+        className="left-3 top-0 translate-y-[-50%]"
+        divRef={ref}
+        animatePos="top"
+      />
       <div className="flex w-full flex-col gap-10">
         <Line />
         <h2 className="text-4xl">
