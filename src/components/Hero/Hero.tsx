@@ -1,10 +1,12 @@
 import { Button } from "antd";
 import heroImage from "../../assets/hero_img.svg";
+import Ball from "../UI/Ball";
 
 function Hero() {
   return (
-    <div className="mx-auto flex h-full max-w-[1145px] items-center justify-center gap-7 overflow-hidden px-4 py-4">
-      <div className="gradient-ball bottom-0 left-[40%]"></div>
+    <div className="relative mx-auto flex h-full max-w-[1145px] items-center justify-center gap-7 overflow-hidden px-4 py-4">
+      {/* <div className="gradient-ball bottom-0 left-[40%] translate-y-[50%]"></div> */}
+      <Ball className="bottom-0 left-[40%] translate-y-[50%]" />
       <div className="flex flex-col items-start gap-4">
         <h1>
           <span className="text-[45px] font-light">

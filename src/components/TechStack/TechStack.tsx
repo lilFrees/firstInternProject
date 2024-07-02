@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { v4 as uuid } from "uuid";
 import { useState } from "react";
 import Line from "../UI/Line";
@@ -5,15 +6,68 @@ import { TechProps } from "../../interfaces/TechProps";
 import TechButton from "./TechButton";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
-import tec1 from "../../assets/techStack/tech1.png";
-import tec2 from "../../assets/techStack/tech2.png";
-import tec3 from "../../assets/techStack/tech3.png";
-import tec4 from "../../assets/techStack/tech4.png";
-import tec5 from "../../assets/techStack/tech5.png";
-import tec6 from "../../assets/techStack/tech6.png";
-import tec7 from "../../assets/techStack/tech7.png";
-import tec8 from "../../assets/techStack/tech8.png";
-import tec9 from "../../assets/techStack/tech9.png";
+
+const back = import.meta.glob(`../../assets/techStack/back/*.png`);
+
+import tec1 from "../../assets/techStack/back/tech1.png";
+import tec2 from "../../assets/techStack/back/tech2.png";
+import tec3 from "../../assets/techStack/back/tech3.png";
+import tec4 from "../../assets/techStack/back/tech4.png";
+import tec5 from "../../assets/techStack/back/tech5.png";
+import tec6 from "../../assets/techStack/back/tech6.png";
+import tec7 from "../../assets/techStack/back/tech7.png";
+import tec8 from "../../assets/techStack/back/tech8.png";
+import tec9 from "../../assets/techStack/back/tech9.png";
+
+import front1 from "../../assets/techStack/front/tech1.png";
+import front2 from "../../assets/techStack/front/tech2.png";
+import front3 from "../../assets/techStack/front/tech3.png";
+import front4 from "../../assets/techStack/front/tech4.png";
+import front5 from "../../assets/techStack/front/tech5.png";
+import front6 from "../../assets/techStack/front/tech6.png";
+import front7 from "../../assets/techStack/front/tech7.png";
+import front8 from "../../assets/techStack/front/tech8.png";
+import front9 from "../../assets/techStack/front/tech9.png";
+
+import db1 from "../../assets/techStack/db/tech1.png";
+import db2 from "../../assets/techStack/db/tech2.png";
+import db3 from "../../assets/techStack/db/tech3.png";
+import db4 from "../../assets/techStack/db/tech4.png";
+
+import cms1 from "../../assets/techStack/cms/tech1.png";
+import cms2 from "../../assets/techStack/cms/tech2.png";
+import cms3 from "../../assets/techStack/cms/tech3.png";
+import cms4 from "../../assets/techStack/cms/tech4.png";
+
+import cloud1 from "../../assets/techStack/cloud/tech1.png";
+import cloud2 from "../../assets/techStack/cloud/tech2.png";
+import cloud3 from "../../assets/techStack/cloud/tech3.png";
+import cloud4 from "../../assets/techStack/cloud/tech4.png";
+
+import devops1 from "../../assets/techStack/devops/tech1.png";
+import devops2 from "../../assets/techStack/devops/tech2.png";
+
+const backend = [tec1, tec2, tec3, tec4, tec5, tec6, tec7, tec8, tec9];
+
+const frontend = [
+  front1,
+  front2,
+  front3,
+  front4,
+  front5,
+  front6,
+  front7,
+  front8,
+  front9,
+];
+
+const db = [db1, tec3, db2, db3, db4, tec9];
+
+const cms = [cms1, cms2, cms3, cms4];
+
+const cloud = [cloud1, cloud2, cloud3, cloud4];
+
+const devops = [devops1, devops2];
 
 const stack: TechProps[] = [
   {
@@ -45,11 +99,27 @@ const stack: TechProps[] = [
 const techImages = [
   {
     id: 1,
-    images: [tec1, tec2, tec3, tec4, tec5, tec6, tec7, tec8, tec9],
+    images: backend,
   },
   {
     id: 2,
-    images: [tec9, tec8, tec7, tec6, tec5, tec4, tec3, tec2, tec1],
+    images: frontend,
+  },
+  {
+    id: 3,
+    images: db,
+  },
+  {
+    id: 3,
+    images: cms,
+  },
+  {
+    id: 3,
+    images: cloud,
+  },
+  {
+    id: 3,
+    images: devops,
   },
 ];
 

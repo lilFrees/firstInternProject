@@ -3,6 +3,7 @@ import image from "../../assets/footer/google-page-speed 1.png";
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
 import { PiInstagramLogoThin } from "react-icons/pi";
 import { FaLinkedinIn } from "react-icons/fa6";
+import { Button } from "antd";
 
 function Footer() {
   return (
@@ -54,18 +55,20 @@ function Footer() {
           </div>
         </div>
         <div className="mt-auto flex gap-4">
-          <div className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-[#FAFAFA] shadow-black/15 drop-shadow-xl transition-all duration-300 hover:bg-slate-200 hover:shadow-black/30">
-            <FaFacebookF />
-          </div>
-          <div className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-[#FAFAFA] shadow-black/15 drop-shadow-xl transition-all duration-300 hover:bg-slate-200 hover:shadow-black/30">
-            <PiInstagramLogoThin />
-          </div>
-          <div className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-[#FAFAFA] shadow-black/15 drop-shadow-xl transition-all duration-300 hover:bg-slate-200 hover:shadow-black/30">
-            <FaTwitter />
-          </div>
-          <div className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-[#FAFAFA] shadow-black/15 drop-shadow-xl transition-all duration-300 hover:bg-slate-200 hover:shadow-black/30">
-            <FaLinkedinIn />
-          </div>
+          <Button icon={<FaFacebookF />} shape="circle" type="default"></Button>
+          <Button
+            icon={<PiInstagramLogoThin />}
+            shape="circle"
+            type="default"
+          ></Button>
+
+          <Button icon={<FaTwitter />} shape="circle" type="default"></Button>
+
+          <Button
+            icon={<FaLinkedinIn />}
+            shape="circle"
+            type="default"
+          ></Button>
         </div>
       </div>
     </div>

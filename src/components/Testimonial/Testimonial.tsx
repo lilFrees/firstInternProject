@@ -13,6 +13,7 @@ import TestimonialClient from "./TestimonialClient";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa";
 import Swiper from "swiper";
+import vector from "../../assets/apos.svg";
 
 const testimonials: FeedbackProps[] = [
   {
@@ -114,7 +115,21 @@ function Testimonial() {
         >
           {testimonials.map((el) => (
             <SwiperSlide key={el.id}>
-              <div className="mx-auto max-w-[70ch] py-14">
+              <div className="relative mx-auto w-[55ch] py-14">
+                <div className="absolute -left-20 top-0 h-6 w-6">
+                  <img
+                    src={vector}
+                    className="block h-full w-full object-contain"
+                    alt="Apostrophe"
+                  />
+                </div>
+                <div className="absolute -right-20 bottom-0 h-6 w-6">
+                  <img
+                    src={vector}
+                    className="block h-full w-full scale-x-[-1] object-contain"
+                    alt="Apostrophe"
+                  />
+                </div>
                 <div className="text-center text-lg leading-8 text-slate-500">
                   {el.text}
                 </div>

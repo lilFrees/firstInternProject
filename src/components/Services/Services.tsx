@@ -62,16 +62,14 @@ function Services() {
   };
 
   return (
-    <div className="z-50 border-y-[1px] border-slate-300 bg-slate-100">
+    <div className="z-[9999999999] border-y-[1px] border-slate-300 bg-slate-100">
       <div className="mx-auto flex max-w-[1145px] flex-col gap-8 py-12">
         <h2 className="text-center text-4xl font-bold">Services we offer</h2>
         <SwiperReact
           className="w-full overflow-visible"
           slidesPerView={3}
           spaceBetween={50}
-          autoplay={{
-            delay: 1000,
-          }}
+          autoplay={true}
           onSwiper={(e) => {
             swiperRef.current = e;
           }}
@@ -95,10 +93,10 @@ function Services() {
             <button
               key={i}
               className={
-                "h-5 w-5 rounded-full border-2 transition-all duration-75 " +
+                "h-5 w-5 rounded-full transition-all duration-75 " +
                 (currentIndex === i
                   ? " border-transparent bg-gradient-to-tr from-purple-900 to-pink-600"
-                  : " border-gray-300")
+                  : " border-2 border-gray-300")
               }
               onClick={() => {
                 goToSlide(i);

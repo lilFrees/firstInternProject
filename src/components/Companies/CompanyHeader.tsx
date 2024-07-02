@@ -3,7 +3,8 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 function CompanyHeader() {
   return (
-    <div className="mx-auto flex max-w-[1145px] justify-between px-4 py-12">
+    <div className="relative mx-auto flex max-w-[1145px] justify-between overflow-hidden px-4 py-12">
+      <div className="gradient-ball bottom-0 right-[40%] translate-y-[50%]"></div>
       <div className="flex flex-col gap-7">
         <Line />
         <h2 className="text-4xl">

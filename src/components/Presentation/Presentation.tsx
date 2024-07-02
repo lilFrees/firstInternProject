@@ -4,7 +4,8 @@ import LinkButton from "../UI/LinkButton";
 
 function Presentation() {
   return (
-    <div className="mx-auto flex max-w-[1145px] gap-12 px-4 py-28">
+    <div className="relative mx-auto flex max-w-[1145px] gap-12 overflow-hidden px-4 py-28">
+      <div className="gradient-ball left-3 top-0 translate-y-[-50%]"></div>
       <div className="flex w-full flex-col gap-10">
         <Line />
         <h2 className="text-4xl">
